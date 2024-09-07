@@ -1,3 +1,5 @@
+// Random Hex Color Generator
+
 // Get required selectors
 const hexColor = document.querySelector(".hex-color");
 const generateBtn = document.querySelector(".generate");
