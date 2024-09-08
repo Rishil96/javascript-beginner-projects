@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
-
 :root {
   --white: #fff;
   --black: #1c2b2d;
@@ -7,8 +6,8 @@
   --light-blue: #005490;
   --color-primary: #9d0191;
   --color-sec: #db6400;
-  --grey: #eee;
-  --dark-grey: #222831;
+  --color-grey: #eee;
+  --color-dark-grey: #222831;
 }
 
 * {
@@ -17,24 +16,12 @@
   box-sizing: border-box;
 }
 
-img {
-  
-  width: 100%;
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 html {
   font-size: 10px;
-  
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,7 +38,7 @@ p {
 header {
   text-align: center;
   color: #fff;
-  padding-bottom: 3rem; 
+  padding-bottom: 3rem;
 }
 
 header h1 {
@@ -71,17 +58,22 @@ section .container {
   flex-direction: column;
 }
 
+form {
+  padding-bottom: 1rem;
+}
+
 form button {
-  border: 1px solid #fff;
   outline: none;
-  padding: 8px;
+  border: none;
   border-radius: 3px;
-  background-color: transparent;
-  color: #fff;
   font-size: 1.4rem;
-  font-weight: 700;
-  transition: all .3s;
+  padding: 0.8rem;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 form button:hover {
@@ -107,15 +99,38 @@ form button:hover {
   margin: 15% auto;
   padding: 2rem;
   border: 1px solid #777;
+  position: relative;
   text-align: center;
-  animation: slide ease .8s;
+  animation: slide ease 0.8s;
 }
 
- @keyframes slide {
-  from {
-    transform: translateY(-30);
-  } 
-  to {
+@keyframes slide {
+  0% {
+    transform: translateY(-30rem);
+  }
+  100% {
     transform: translateY(0);
   }
- }
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: var(--color-primary);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.slide-up {
+  animation: slide-up ease 0.8s;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50rem);
+  }
+}
