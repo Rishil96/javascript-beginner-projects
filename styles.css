@@ -38,4 +38,60 @@ img {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+}
+
+body {
+  background-color: var(--light-blue);
+}
+
+.click-to-copy {
+  padding: 1rem;
+  margin-top: 0.1rem;
+  margin-left: 1rem;
+}
+
+.input-text {
+  padding: 1.5rem 0.5rem;
+  width: 280px;
+  height: 30px;
+  font-size: 1.7rem;
+  color: var(--dark-grey);
+  font-weight: 400;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+}
+
+h3 {
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.btn {
+  width: 50px;
+  height: 25px;
+  background-color: var(--light-blue);
+  color: var(--white);
+  border: 1px solid var(--white);
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding-top: 0.7rem;
+  padding-bottom: 2.4rem;
+  text-align: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-left: 0.2rem;
+
+}
+
+.btn:hover {
+  background-color: var(--color-primary);
 }
