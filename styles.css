@@ -80,7 +80,7 @@ input, select {
   font-size: 1.6rem;
   padding: 7px;
   width: 20rem;
-  text-align: right;
+  text-align: left;
 }
 
 .btn {
