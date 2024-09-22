@@ -46,6 +46,9 @@ img {
 header {
   width: 100%;
   background-color: var(--dark-grey);
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 
 nav {
@@ -71,7 +74,7 @@ nav {
   margin: 0 1.5rem;
 }
 
-.nav-list li a {
+li a {
   color: var(--white);
   font-size: 1.6rem;
   text-decoration: none;
@@ -101,3 +104,20 @@ h2 {
   margin: 3px;
 }
 
+.active {
+  position: relative;
+}
+
+.active > * {
+  color: var(--color-sec)
+}
+
+.active::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  background-color: var(--white);
+}
