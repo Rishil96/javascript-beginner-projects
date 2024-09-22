@@ -1,19 +1,11 @@
-// Smooth Scroll using JS
+// Active Menu Switcher
 
-const links = document.querySelectorAll(".nav-list li a");
+const navList = document.querySelector(".nav-list");
 
-// Add event listener to all a tags inside navbar
-for (let link of links) {
-    link.addEventListener("click", smoothScroll);
-}
-
-
-function smoothScroll(e) {
-    e.preventDefault();
-
-    const href = this.getAttribute("href");
-    
-    document.querySelector(href).scrollIntoView({
-        behavior: "smooth",
-    });
-}
+navList.addEventListener("click", (e) => {
+    const navLink = e.target.parentElement;
+    if (navLink.classList.contains("link")) {
+        navList.querySelector(".active").classList.remove("active");
+        navLink.classList.add("active");
+    }
+});
