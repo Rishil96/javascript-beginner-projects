@@ -1,11 +1,26 @@
-// Active Menu Switcher
+// Scroll to Top
 
-const navList = document.querySelector(".nav-list");
+const scrollBtn = document.querySelector(".top");
+const rootEl = document.documentElement;
 
-navList.addEventListener("click", (e) => {
-    const navLink = e.target.parentElement;
-    if (navLink.classList.contains("link")) {
-        navList.querySelector(".active").classList.remove("active");
-        navLink.classList.add("active");
+document.addEventListener("scroll", showButton);
+scrollBtn.addEventListener("click", scrollToTop);
+
+// Function to display the button when more than 30% of the page is scrolled down
+function showButton() {
+    const scrollTotal = rootEl.scrollHeight - rootEl.clientHeight;
+    if (rootEl.scrollTop / scrollTotal > 0.3) {
+        scrollBtn.classList.add("show-btn");
     }
-});
+    else {
+        scrollBtn.classList.remove("show-btn");
+    }
+}
+
+// Function to scroll back up to the top on clicking the scroll btn
+function scrollToTop() {
+    rootEl.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+}
