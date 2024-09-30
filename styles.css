@@ -136,7 +136,7 @@ h2 {
     display: block;
     background-color: rgba(0, 0, 0, 0.7);
     padding-top: 2rem;
-    /* transform: translateX(200%); */
+    transform: translateX(200%);
     transition: all 0.5s;
   }
   
@@ -146,7 +146,7 @@ h2 {
 
   .nav-wrapper {
     width: 100%;
-    /* transform: translateX(-200%); */
+    transform: translateX(-200%);
     z-index: 1;
   }
 
