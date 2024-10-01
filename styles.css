@@ -102,6 +102,10 @@ h2 {
   margin: 3px;
 }
 
+nav i {
+  color: var(--dark-grey);
+}
+
 /* Mobile Responsive App */
 @media screen and (max-width: 600px) {
   .flex {
