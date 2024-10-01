@@ -42,9 +42,24 @@ const hideMenu = () => {
     hamburger.style.display = "block";
     menuWrapper.style.transform = "translateY(-200%)";
     menu.style.transform = "translateX(200%)";
+    subMenuThree.style.transform = "translateX(-100%)";
 }
 
 
 close.addEventListener("click", hideMenu);
 menuWrapper.addEventListener("click", hideMenu);
 
+// Submenu Section
+const thirdLink = document.querySelector(".third-link");
+const back = document.querySelector(".back-to-menu");
+const subMenuThree = document.querySelector(".submenu-three");
+
+thirdLink.addEventListener("click", () => {
+    menu.style.transform = "translateX(-100%)";
+    subMenuThree.style.transform = "translateX(0)";
+})
+
+back.addEventListener("click", () => {
+    subMenuThree.style.transform = "translateX(-100%)";
+    menu.style.transform = "translateX(0)";
+})
