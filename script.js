@@ -36,5 +36,17 @@ function scrollProgress() {
     const progressBar = document.querySelector(".progress");
     progressBar.style.visibility = "visible";
     progressBar.style.width = scrollPercentage + "%";
+
+    /* Newsletter JS */
+    const newsLetter = document.querySelector(".newsletter");
+    if (scrollPercentage > 80) {
+        newsLetter.style.transform = "translateX(0)";
+    } else {
+        newsLetter.style.transform = "translateX(-100%)";
+    }
+
+    document.querySelector(".fa-times").addEventListener("click", () => {
+        newsLetter.style.transform = "translateX(-100%)";
+    })
 }
 
